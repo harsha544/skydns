@@ -1,9 +1,8 @@
-FROM alpine:latest
-MAINTAINER Miek Gieben <miek@miek.nl> (@miekg)
+FROM ubuntu:xenial
 
-RUN apk --update add bind-tools && rm -rf /var/cache/apk/*
+RUN apt update; apt install dnsutils bind9utils -y
 
-ADD skydns skydns
+ADD skydns /skydns
 
 EXPOSE 53 53/udp
 ENTRYPOINT ["/skydns"]
