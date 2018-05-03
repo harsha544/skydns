@@ -26,10 +26,10 @@ will be focussed on version 2. [Version 1 of SkyDNS can be found
 here](https://github.com/skynetservices/skydns1).
 
 ## Go Setup on POWER
-wget https://dl.google.com/go/go1.9.4.linux-ppc64le.tar.gz
-Follow instructions here https://golang.org/doc/install?download=go1.10.2.linux-ppc64le.tar.gz#tarball 
+wget https://dl.google.com/go/go1.10.2.linux-ppc64le.tar.gz
+Follow instructions here https://golang.org/doc/install?download=go1.10.2.linux-ppc64le.tar.gz#tarball
 
-Looks like incompatible etcd package version causing issues, as such Line 323 of main.go has been commented out to ensure go build happens smoothly.
+Looks like incompatible etcd package version causing issues, as such Line 323 of main.go has been modified as such 
 
 P.S :- Build instructions 
 cd $GOPATH/src/github.com/skynetservices/skydns
